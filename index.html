@@ -21,7 +21,7 @@
                         <button @click="addToTotals(item)">+</button>
                         <button @click="removeFromCart(index, item)">-</button>
                       </div>
-                      <p>R <span x-text="item.price"></span></p>
+                      <p>R <span x-text="item.price.toFixed(2)"></span></p>
                     </div>
                 </template>
             </div>

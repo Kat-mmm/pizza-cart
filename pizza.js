@@ -25,15 +25,41 @@ function pizzaCart() {
         this.addPizza('Large', 87.99);
       },
       addToTotals(item) {
-        item.price += item.price;
-        this.total += item.price;
+        if(item.size === 'Small'){
+            this.total += 31.99;
+            item.price += 31.99;
+        }
+        else if(item.size === 'Medium'){
+            this.total += 58.99;
+            item.price += 58.99;
+        }
+        else if(item.size === 'Large'){
+            this.total += 87.99;
+            item.price += 87.99;
+        }
       },
       removeFromCart(index, item) {
-        this.total -= item.price;
-        item.price -= item.price;
-        if (item.price === 0) {
-          this.itemsCart.splice(index, 1);
+        if(item.size === 'Small'){
+            this.total -= 31.99;
+            item.price -= 31.99;
         }
+        else if(item.size === 'Medium'){
+            this.total -= 58.99;
+            item.price -= 58.99;
+        }
+        else if(item.size === 'Large'){
+            this.total -= 87.99;
+            item.price -= 87.99;
+        }
+
+        if (item.price <= 0) {
+            this.itemsCart.splice(index, 1);
+        }
+        if(this.itemsCart.length === 0){
+            this.show = false;
+        }
+        
+        
       },
       checkPayment(amount){
         if(amount >= this.total){
