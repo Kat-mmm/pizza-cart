@@ -1,0 +1,129 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    padding: 41px 37px 41px 37px;
+    background-color: #14213D;
+    color: white;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.header, .cart, .pizzas, .footer{
+    width: 100%;
+}
+
+.header{
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+}
+
+.header h1{
+    text-align: center;
+}
+
+.cart{
+    text-align: center;
+    background-color: #e5e5e5;
+    color: black;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+.cart-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* *{
+    border: 1px solid red;
+} */
+
+.cart-item{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cart button{
+    width: fit-content;
+    height: fit-content;
+    background-color: #14213D;
+    color: white;
+    cursor: pointer;
+}
+
+.cart-item button{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.pizzas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.item{
+    background-color: #fca311;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px;
+    color: black;
+    border-radius: 5px;
+}
+
+.item h6{
+    font-weight: bold;
+    font-size: medium;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+button{
+    background-color: #e5e5e5;
+    padding: 10px;
+    font-weight: bolder;
+    width: 120px;
+    border: none;
+    border-radius: 3px;
+    font-size: small;
+}
+
+.item button:hover{
+    background-color: #14213D;
+    color: white;
+    transition: 0.5s;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #e5e5e5;
+    color: black;
+    border-radius: 5px;
+}
+
+.contact, .address{
+    margin: 10px;
+}
+
+.green{
+    color: green;
+}
+
+.red{
+    color: red;
+}
