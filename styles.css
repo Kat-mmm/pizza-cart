@@ -44,10 +44,6 @@ body{
     width: 100%;
 }
 
-/* *{
-    border: 1px solid red;
-} */
-
 .cart-item{
     width: 30%;
     display: flex;
@@ -126,4 +122,13 @@ button{
 
 .red{
     color: red;
+}
+
+@media only screen and (max-width: 768px) {
+    .pizzas{
+        display: block;
+    }
+    .item{
+        margin-bottom: 15px;
+    }
 }
